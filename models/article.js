@@ -12,7 +12,7 @@ const articleSchema = new Schema({
   description: {type: String, require: true},
   infoLink: {type: String, require: true},
   imageLinks: {type: String, require: true},
-  articleId: {type: String, require: true}
+
 });
 
 
