@@ -1,0 +1,26 @@
+/////////////////////////////////////////////// /* Imports */ //////////////////////////////////////////////////////////
+const mongoose = require("mongoose");
+
+/////////////////////////////////////////////// /* Initialize */ //////////////////////////////////////////////////////////
+const Schema = mongoose.Schema;
+
+/////////////////////////////////////////////// /* Article Schema */ //////////////////////////////////////////////////////////
+const articleSchema = new Schema({
+
+  title: {type: String, require: true},
+  authors: {type: String, require: true},
+  description: {type: String, require: true},
+  infoLink: {type: String, require: true},
+  imageLinks: {type: String, require: true},
+  articleId: {type: String, require: true}
+});
+
+
+
+
+const Article = mongoose.model("Article", articleSchema); // This creates our model from the above schema, using mongoose's model method
+
+/////////////////////////////////////////////// /* Export */ //////////////////////////////////////////////////////////
+module.exports = Article;
+
+
