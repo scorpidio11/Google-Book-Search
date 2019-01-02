@@ -4,10 +4,12 @@ import './Nav.css';
 
 class Nav extends Component {
 
+/*
   constructor(props) {
       super(props);
 
-  } // End Constructor
+  }
+*/ // End Constructor
 
 
   render(){
@@ -16,8 +18,8 @@ class Nav extends Component {
       <div>
         <nav>
           <div className="nav-wrapper">
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li className="brand-logo center customNav"><i className="fas fa-book "></i>Google Book Search</li>
+            <ul id="nav-mobile" className="left">
+              <li className="brand-logo center customNav"><i className="fas fa-book"></i>Google Book Search</li>
               <li><a onClick={()=>window.location.replace("/")} style={{"textDecoration": "none"}}>Home</a></li>
               <li><NavLink to="/saved" style={{"textDecoration": "none"}}>Saved</NavLink></li>
             </ul>

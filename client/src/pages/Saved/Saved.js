@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import API from '../../utils/API';
 import SavedResult from '../../components/SavedResult';
 import Nav from '../../components/NavBar';
