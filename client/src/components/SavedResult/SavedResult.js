@@ -27,11 +27,13 @@ export default class IndividualResult extends Component {
         <br/>
         <strong> Title: </strong>  {this.props.title}
         <br/>
-        <strong> URL: </strong> <a href={this.props.url} target="_blank"> {this.props.url} </a>
-        {this.props.date? (<strong><br/>{`Date: ${this.props.date}`}</strong>) : ""}
+        <strong> Authors: </strong> {this.props.authors}
         <br/>
-        <strong> ID: </strong> {this.props.articleId}
+        <strong> description: </strong> {this.props.description}
         <br/>
+        <strong> Link: </strong> <a href={this.props.link} target="_blank"> {this.props.link} </a>
+        <br/>
+       
         {this.state.deleted? (<button style={{"margin-top" : "10px"}} id={this.props.id} className="btn btn-primary right-align"> Article Deleted </button>):
           (<button style={{"margin-top" : "10px"}} id={this.props.id} onClick={this.delete} className="btn btn-success right-align"> Delete </button>)
         }

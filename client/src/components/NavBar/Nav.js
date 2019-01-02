@@ -17,7 +17,7 @@ class Nav extends Component {
         <nav>
           <div className="nav-wrapper">
             <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li><a href="#" className="brand-logo center customNav">Google Book Search</a></li>
+              <li><a href="#" className="brand-logo center customNav"><i classNams="fas fa-book "></i>Google Book Search</a></li>
               <li><a onClick={()=>window.location.replace("/")} style={{"text-decoration": "none"}}>Home</a></li>
               <li><NavLink to="/saved" style={{"text-decoration": "none"}}>Saved</NavLink></li>
             </ul>
