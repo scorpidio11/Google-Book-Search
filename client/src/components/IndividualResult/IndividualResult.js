@@ -44,7 +44,7 @@ export default class IndividualResult extends Component {
         <strong> Link: </strong> <a href={this.props.link} target="_blank"> {this.props.link} </a>
         <br/>
        
-        {this.state.saved? (<button style={{"margin-top" : "10px"}} id={this.props.id} className="btn btn-primary right-align"> Article Saved </button>):
+        {this.state.saved? (<button style={{"margin-top" : "10px"}} id={this.props.id} className="btn btn-primary right-align"> Book Saved </button>):
           (<button style={{"margin-top" : "10px"}} id={this.props.id} onClick={this.save} className="btn btn-success right-align"> Save </button>)
         }
 
