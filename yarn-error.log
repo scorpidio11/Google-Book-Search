@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn
+  /usr/local/bin/node /usr/local/bin/yarn start
 
 PATH: 
   /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/chinsookpak/Desktop/Homework/Google-Book-Search/package.json: Unexpected token } in JSON at position 357
+  SyntaxError: /Users/chinsookpak/Desktop/Homework/Google-Book-Search/package.json: Unexpected token } in JSON at position 269
       at JSON.parse (<anonymous>)
       at /usr/local/lib/node_modules/yarn/lib/cli.js:1631:59
       at Generator.next (<anonymous>)
@@ -34,16 +34,9 @@ npm manifest:
       "type": "git",
       "url": "https://github.com/npm/npm.git",
       "private": true
-    },
-  
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-   
     }
   
-  
-  
+    }
   }
 
 yarn manifest: 
