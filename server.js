@@ -32,9 +32,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/article");
 
 // mongoose.connect('mongodb://localhost/article');
 
-// mongoose.connect( // Connect to the Mongo DB
-//   process.env.MONGODB_URI || "mongodb://heroku_8zqx26cl:le1fh1tcj3m2gsggd819o9ns7e@ds249398.mlab.com:49398/heroku_8zqx26cl"
-// );
+mongoose.connect( // Connect to the Mongo DB
+  process.env.MONGODB_URI || "mongodb://heroku_4t112zrh:cosimo77@ds153314.mlab.com:53314/heroku_4t112zrh"
+);
+
 
 
 
