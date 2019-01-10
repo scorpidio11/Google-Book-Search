@@ -5,12 +5,6 @@
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
     "react-router-dom": "^4.3.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/scorpidio11/Google-Book-Search/",
-    "private": true
-  
-
   }
+  
 }
