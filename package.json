@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/npm/npm.git",
+    "url": "https://github.com/scorpidio11/Google-Book-Search/",
     "private": true
-  },
-"start": "node server.js"
+  
 
+  }
 }
