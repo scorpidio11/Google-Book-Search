@@ -33,7 +33,7 @@ mongoose.Promise = global.Promise; // Set up promises with mongoose
 
 
 mongoose.connect( // Connect to the Mongo DB
-  process.env.MONGODB_URI ||  "mongodb://heroku_4t112zrh:i9aogl4mn8ai6btgokhbj4jgeu@ds153314.mlab.com:53314/heroku_4t112zrh"
+  process.env.MONGODB_URI ||  "mongodb://heroku_4t112zrh:cosimo77@ds153314.mlab.com:53314/heroku_4t112zrh"
 );
 
 
