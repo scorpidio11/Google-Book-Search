@@ -21,16 +21,14 @@ class Saved extends Component {
       this.setState({
         articles:  resArticles.data.map(eachArticle => {
                   return(
-                    <SavedResult title={eachArticle.title} authors={eachArticle.authors}  description={eachArticle.description}
-                    link={eachArticle.infoLink}  image={eachArticle.imageLinks && eachArticle.imageLinks.thumbnail ? eachArticle.imageLinks.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png"} onDelete={this.onDelete}/>
+                  <SavedResult date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
+                    url={eachArticle.url} title={eachArticle.title} image={eachArticle.image} onDelete={this.onDelete}/>
                   );
                 })
       })
 
     }); // End of then
   }
-
-
 
 
   componentDidMount(){
@@ -42,8 +40,8 @@ class Saved extends Component {
       this.setState({
         articles:  articles.map(eachArticle => {
                   return(
-                    <SavedResult title={eachArticle.title} authors={eachArticle.authors}  description={eachArticle.description}
-                    link={eachArticle.infoLink}  image={eachArticle.imageLinks && eachArticle.imageLinks.thumbnail ? eachArticle.imageLinks.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png"} onDelete={this.onDelete}/>
+                  <SavedResult date={eachArticle.date} key={eachArticle.articleId} articleId={eachArticle.articleId}
+                    url={eachArticle.url} title={eachArticle.title} image={eachArticle.image} onDelete={this.onDelete}/>
                   );
                 })
       });

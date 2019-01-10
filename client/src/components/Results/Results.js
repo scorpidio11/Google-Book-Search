@@ -18,7 +18,7 @@ export default class Results extends Component {
   render() {
 
     let articleResults = [];
-
+    console.log(this.props, "newProps")
     if(this.props.results.articles.length > 0 ){
 
       console.log(JSON.stringify(this.props.results.articles))
@@ -26,7 +26,7 @@ export default class Results extends Component {
 
         return(
           <IndividualResult title={article.title} authors={article.authors} description={article.description} link={article.link} 
-            image={`${article.image? "https://static01.nyt.com/"+ article.image.url : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png" }`}
+            image={article.image && article.image.thumbnail ? article.image.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png"}
           />
         )
       });

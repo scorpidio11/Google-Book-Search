@@ -33,11 +33,12 @@ class Home extends Component {
     API.search(query).then(res => {
     let articlesArray = [];
 
-    res.data.items.map(({title, authors, description, infoLink, imageLinks}) => {
+    res.data.items.map((item) => {
+      const {title, authors, description, infoLink, imageLinks} = item.volumeInfo
         articlesArray.push({title: title, authors: authors, description: description, link: infoLink, image: imageLinks});
       });
 
-console.log(res.data.items)
+console.log(res.data.items, articlesArray, "abc")
     this.setState(prevState => ({
       articles: [...prevState].concat(articlesArray).splice(0, this.state.limit)
     }), console.log(this.state.limit))
