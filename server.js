@@ -28,13 +28,15 @@ mongoose.Promise = global.Promise; // Set up promises with mongoose
 
 // mongoose.connect('mongodb://localhost/article');
 
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/article");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/article");
 
 
 
+/*
 mongoose.connect( // Connect to the Mongo DB
   process.env.MONGODB_URI ||  "mongodb://heroku_4t112zrh:cosimo77@ds153314.mlab.com:53314/heroku_4t112zrh"
 );
+*/
 
 
 
