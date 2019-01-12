@@ -10,7 +10,9 @@
     },
 
  "scripts": {
-   
+  
+    "start": "node index.js",
+ 
     "build": "react-scripts build"
  
   },
