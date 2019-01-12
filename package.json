@@ -1,11 +1,11 @@
 {
-  "name": "Google-Book-Serach",
+  "name": "Google-Book-Search",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
 
   "engines": {
-    "node": "v10.11.0"
+    "node": "10.11.0"
     
     },
 
