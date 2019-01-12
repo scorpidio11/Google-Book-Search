@@ -7,7 +7,7 @@ const routes = require("./routes");
 let db = require("./models"); // Require all models
 
 /////////////////////////////////////////////// /* Variables */ //////////////////////////////////////////////////////////
-let PORT = process.env.PORT || 8080;
+let PORT = process.env.PORT || 5000;
 let mongooseConnection = mongoose.connection;
 
 /////////////////////////////////////////////// /* Initialize Express */ //////////////////////////////////////////////////////////
@@ -16,9 +16,13 @@ let app = express();
 /////////////////////////////////////////////// /* Express Middleware */ //////////////////////////////////////////////////////////
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true})); // Allows For JSON Interactions Between Client & Server
+
+
+
 app.use(express.static("client/build")); // Serve Static React Pages
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
+
 
 /////////////////////////////////////////////// /* Mongoose Configurations*/ //////////////////////////////////////////////////////////
 mongoose.Promise = global.Promise; // Set up promises with mongoose
@@ -30,6 +34,11 @@ mongoose.Promise = global.Promise; // Set up promises with mongoose
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/article");
 
+// Send every other request to the React app
+// Define any API routes before this runs
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
+// });
 
 
 
@@ -50,12 +59,12 @@ app.use(function(req, res, next) {
 });
 app.use(cors());
 
-// app.post("/saveArticle", function(req, res) {
-//    console.log("back path hit")
-//    db.Article.create(req.body).then((lol)=>
-//      console.log(lol)
-//    );
-// });
+app.post("/saveArticle", function(req, res) {
+   console.log("back path hit")
+   db.Article.create(req.body).then((lol)=>
+     console.log(lol)
+   );
+});
 
 
 app.use(routes); // Add routes, both API and View
