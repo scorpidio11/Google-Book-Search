@@ -13,9 +13,16 @@ let mongooseConnection = mongoose.connection;
 /////////////////////////////////////////////// /* Initialize Express */ //////////////////////////////////////////////////////////
 let app = express();
 
-/////////////////////////////////////////////// /* Express Middleware */ //////////////////////////////////////////////////////////
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true})); // Allows For JSON Interactions Between Client & Server
+/////////////////////////////////////////////// 
+// Define middleware here
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+// Allows For JSON Interactions Between Client & Server
 
 
 
@@ -68,6 +75,13 @@ app.post("/saveArticle", function(req, res) {
 
 
 app.use(routes); // Add routes, both API and View
+
+// Send every other request to the React app
+// Define any API routes before this runs
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 
 
 /////////////////////////////////////////////// /* Start Server */ //////////////////////////////////////////////////////////
