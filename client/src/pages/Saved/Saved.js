@@ -43,7 +43,7 @@ class Saved extends Component {
         articles:  articles.map(eachArticle => {
                   return(
                     <SavedResult title={eachArticle.title} authors={eachArticle.authors}  description={eachArticle.description}
-                    link={eachArticle.infoLink}  image={eachArticle.imageLinks && eachArticle.imageLinks.thumbnail ? eachArticle.imageLinks.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png"} onDelete={this.onDelete}/>
+                    link={eachArticle.link}  image={eachArticle.image && eachArticle.image.thumbnail ? eachArticle.image.thumbnail : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/450px-No_image_available.svg.png"} onDelete={this.onDelete}/>
                   );
                 })
       });

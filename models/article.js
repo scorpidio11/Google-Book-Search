@@ -10,8 +10,8 @@ const articleSchema = new Schema({
   title: {type: String, require: true},
   authors: {type: String, require: true},
   description: {type: String, require: true},
-  infoLink: {type: String, require: true},
-  imageLinks: {type: String, require: true},
+  link: {type: String, require: true},
+  image: {type: String, require: true},
 
 });
 

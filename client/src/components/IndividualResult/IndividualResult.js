@@ -23,7 +23,7 @@ export default class IndividualResult extends Component {
       authors: this.props.authors,
       description: this.props.description,
       link : this.props.link,
-      image : this.props.image
+      image: this.props.image
     }).then(that.setState({
       saved: true
     }));

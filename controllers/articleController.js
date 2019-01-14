@@ -38,7 +38,7 @@ module.exports = {
 
   save:  function(req, res){
     console.log("Save Article Path hit");
-    db.Article.findOne({articleId: req.body.articleId})
+    db.Article.findOne({_id: req.body.id})
     .then(function(response){
       if (response === null) { // Only Create Article if it has not been Created
         db.Article.create(req.body).then((response) => {console.log(response + " Has been Created")
